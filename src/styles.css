@@ -1,8 +1,17 @@
+@import 'tailwindcss';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-@import "tailwindcss";
+@theme {
+  --color-background: hsl(229, 63%, 10%);
+  --color-navbar: hsl(229, 63%, 5%);
+  --color-accent: hsl(26, 82%, 58%);
+}
 
 * {
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+  color-scheme: dark;
 }
 
 html,
@@ -14,4 +23,3 @@ body,
 body {
   margin: 0;
 }
-

@@ -19,9 +19,11 @@
     "@tanstack/react-devtools": "0.10.13",
     "@tanstack/react-router": "1.170.45",
     "@tanstack/react-router-devtools": "1.167.2",
+    "matrix-animation": "^2.0.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "tailwindcss": "^4.1.18"
+    "tailwindcss": "^4.1.18",
+    "typewriter-effect": "^2.22.0"
   },
   "devDependencies": {
     "@tanstack/devtools-vite": "0.8.5",
