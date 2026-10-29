@@ -11,11 +11,11 @@ export const MatrixAnimation = () => {
       const matrix = new MatrixAnimationEngine(container, {
         autoStart: false,
         charArrays: ['0', '1'],
-        frameDelay: 60,
+        frameDelay: 70,
         rainHeight: 7,
         fontSize: 18,
         headColor: '#d5ffdf',
-        rainGenerator: { count: 80 },
+        rainGenerator: { count: 70 },
         rainWidth: 18,
         trailColorLogic: 'sequential',
         trailColors: ['#005b1b', '#00a832', '#00ff41'],
