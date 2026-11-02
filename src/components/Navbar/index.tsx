@@ -9,9 +9,10 @@ export interface NavLink {
 }
 export const navLinks: NavLink[] = [
   { name: 'About', href: '#about' },
+  { name: 'Porfolio', href: '#porfolio' },
+  { name: 'Skills', href: '#skills' },
   { name: 'Contact', href: '#contact' },
   { name: 'Resume', href: '#resume' },
-  { name: 'Language', href: '#language' },
 ]
 
 export const Navbar = () => {
@@ -19,20 +20,23 @@ export const Navbar = () => {
     <>
       <nav className="flex items-center justify-between fixed z-20 py-4 px-10 b-4 bg-navbar h-20 w-full">
         <div>
-          <a href="#" className="flex justify-center items-center gap-2 text-lg text-accent hover:text-accent-hover font-bold">
+          <a
+            href="#"
+            className="flex justify-center items-center gap-2 text-lg text-green-light hover:text-accent-hover font-bold"
+          >
             <ClosingTag />
             Cezar Viana
           </a>
         </div>
         <ul className="hidden md:flex justify-between gap-4 lg:gap-8 ">
           {navLinks.map((link) => (
-            <Link
-              to={link.href}
+            <a
+              href={link.href}
               key={link.name}
               className={`${styles.navLinks}`}
             >
               {link.name}
-            </Link>
+            </a>
           ))}
         </ul>
         <MenuMobile navLinks={navLinks} />

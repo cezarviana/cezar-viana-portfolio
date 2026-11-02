@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 @theme {
-  --color-background: hsl(229, 63%, 10%);
+  --color-background: hsl(229, 63%, 0%);
   --color-navbar: hsl(229, 63%, 5%);
   --color-accent: hsl(138, 100%, 33%);
   --color-accent-hover: hsl(138, 100%, 50%);
@@ -34,4 +34,20 @@ body,
 
 body {
   margin: 0;
+}
+
+.bladerunner-bg {
+  background-color: #000000;
+  /* Camada 1: Gradiente de luz vermelha central */
+  /* Camada 2: As linhas horizontais repetidas */
+  background-image: 
+    radial-gradient(circle at 50% 50%, rgba(139, 45, 30, 0.4) 0%, rgba(0, 0, 0, 0.8) 70%),
+    repeating-linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.6) 0px,
+      rgba(0, 0, 0, 0.6) 2px,
+      rgba(255, 255, 255, 0.03) 2px,
+      rgba(255, 255, 255, 0.03) 4px
+    );
+  background-size: 100% 100%, 100% 4px;
 }
