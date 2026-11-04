@@ -1,19 +1,19 @@
 import { styles } from '../../styles/styles'
-import { PortfolioSites } from '../PortfolioSites'
+import { ProjectsSites } from '../ProjectsSites'
 
-export const Portfolio = () => {
+export const Projects = () => {
   return (
     <>
       <section
         className={`${styles.sections} bg-gray-very-dark
       `}
-        id="portfolio"
+        id="projects"
       >
         <div className="flex items-start w-full p-10 snap-center">
-          <h2 className={`${styles.titles}`}>Portfolio</h2>
+          <h2 className={`${styles.titles}`}>Projects</h2>
         </div>
         <div className="w-full p-10">
-          <PortfolioSites />
+          <ProjectsSites />
         </div>
       </section>
     </>

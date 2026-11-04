@@ -5,7 +5,7 @@ import SistemasRPGLogo from '../../assets/sites/sistemas-rpg.png'
 import JogosParalimpicosLogo from '../../assets/sites/jogos-paralimpicos.png'
 import BatlifeLogo from '../../assets/sites/batlife.png'
 
-export const PortfolioSites = () => {
+export const ProjectsSites = () => {
   interface Site {
     title: string
     description: string
