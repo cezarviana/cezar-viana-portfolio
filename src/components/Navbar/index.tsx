@@ -9,7 +9,7 @@ export interface NavLink {
 }
 export const navLinks: NavLink[] = [
   { name: 'About', href: '#about' },
-  { name: 'Porfolio', href: '#porfolio' },
+  { name: 'Portfolio', href: '#portfolio' },
   { name: 'Skills', href: '#skills' },
   { name: 'Contact', href: '#contact' },
   { name: 'Resume', href: '#resume' },
@@ -22,7 +22,7 @@ export const Navbar = () => {
         <div>
           <a
             href="#"
-            className="flex justify-center items-center gap-2 text-lg text-green-light hover:text-accent-hover font-bold"
+            className="flex justify-center items-center gap-2 text-lg text-green-light hover:text-accent transition-transform duration-300 ease-in-out hover:scale-110 font-bold"
           >
             <ClosingTag />
             Cezar Viana
