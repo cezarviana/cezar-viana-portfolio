@@ -4,6 +4,7 @@ import StudioGhibliLogo from '../../assets/sites/studio-ghibli.png'
 import SistemasRPGLogo from '../../assets/sites/sistemas-rpg.png'
 import JogosParalimpicosLogo from '../../assets/sites/jogos-paralimpicos.png'
 import BatlifeLogo from '../../assets/sites/batlife.png'
+import { Button } from '../Button'
 
 export const ProjectsSites = () => {
   interface Site {
@@ -75,14 +76,7 @@ export const ProjectsSites = () => {
               <h3 className={styles.subtitles}>{site.title}</h3>
               <p className="line-clamp-3">{site.description}</p>
               <div className="flex justify-center items-center">
-                <a
-                  href={site.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex justify-center items-center w-40 border-accent border-2 p-2 rounded-full font-bold hover:bg-accent transition-colors duration-300 ease-in-out shadow-2xl shadow-black"
-                >
-                  {`Visit Website >`}
-                </a>
+                <Button variant="primary" size="md" href={site.link}>Visit Site {`>`} </Button>
               </div>
             </div>
           </li>
