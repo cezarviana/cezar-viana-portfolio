@@ -61,7 +61,7 @@ export const Skills = () => {
           <h2 className={`${styles.titles} z-50`}>Skills</h2>
         </div>
         <div className="w-full p-6">
-          <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-6 w-full">
+          <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-6 place-items-center gap-6 w-full">
 
                     {skills.map((skill) => (
                       <li
