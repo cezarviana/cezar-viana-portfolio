@@ -3,6 +3,7 @@ import { Hero } from '#/components/Hero'
 import { Projects } from '#/components/Projects'
 import { Navbar } from '#/components/NavBar'
 import { createFileRoute } from '@tanstack/react-router'
+import { Skills } from '#/components/Skills'
 
 export const Route = createFileRoute('/')({ component: Home })
 
@@ -13,6 +14,7 @@ function Home() {
       <Hero />
       <About />
       <Projects />
+      <Skills />
     </>
   )
 }
