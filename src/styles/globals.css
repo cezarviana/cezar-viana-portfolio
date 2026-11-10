@@ -16,7 +16,10 @@
   --color-yellow-bright: hsl(59, 98%, 56%);
   --color-orange-light:  hsl(26, 82%, 58%);
   --color-orange-dark:  hsl(26, 82%, 48%);
-  --color-bright-purple-light: hsl(267, 60%, 40%);
+  --color-pink-medium:  hsl(346, 49%, 55%);
+  --color-pink-dark:  hsl(342, 42%, 51%);
+  --color-bright-purple-light:  hsl(290, 60%, 34%);
+  --color-bright-purple-medium: hsl(267, 60%, 40%);
   --color-bright-purple-dark: hsl(267, 60%, 35%);
   --color-purple-light: hsl(240, 21%, 52%);
   --color-purple-medium: hsl(245, 28%, 40%);
@@ -40,18 +43,48 @@ body {
   margin: 0;
 }
 
-.bladerunner-bg {
-  background-color: #000000;
-  /* Camada 1: Gradiente de luz vermelha central */
-  /* Camada 2: As linhas horizontais repetidas */
-  background-image: 
-    radial-gradient(circle at 50% 50%, rgba(139, 45, 30, 0.4) 0%, rgba(0, 0, 0, 0.8) 70%),
-    repeating-linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 0.6) 0px,
-      rgba(0, 0, 0, 0.6) 2px,
-      rgba(255, 255, 255, 0.03) 2px,
-      rgba(255, 255, 255, 0.03) 4px
-    );
-  background-size: 100% 100%, 100% 4px;
+
+.neuromancer-bg {
+  background: linear-gradient(
+    135deg, 
+    #0d080b 0%, 
+    hsl(342, 42%, 25%) 35%, 
+    hsl(346, 49%, 38%) 70%, 
+    #0d080b 100%
+  );
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .neuromancer-bg {
+    animation: none;
+  }
+}
+
+
+.edgerunners-color-cycle {
+  animation: edgerunners-hue 10s linear infinite;
+}
+
+@keyframes edgerunners-hue {
+  from {
+    filter: sepia(1) saturate(5) hue-rotate(0deg);
+  }
+
+  to {
+    filter: sepia(1) saturate(5) hue-rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .edgerunners-color-cycle {
+    animation: none;
+  }
 }

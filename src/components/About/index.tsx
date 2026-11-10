@@ -1,4 +1,3 @@
-
 import { styles } from '../../styles/styles'
 import { UnicornOrigami } from '../UnicornOrigami'
 
