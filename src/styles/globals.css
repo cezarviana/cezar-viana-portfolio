@@ -18,11 +18,17 @@
   --color-orange-dark:  hsl(26, 82%, 48%);
   --color-pink-medium:  hsl(346, 49%, 55%);
   --color-pink-dark:  hsl(342, 42%, 51%);
+  --color-red-medium: hsl(0, 73%, 35%);
+  --color-red-dark:  hsl(8, 79%, 18%);
   --color-bright-purple-light:  hsl(290, 60%, 34%);
   --color-bright-purple-medium: hsl(267, 60%, 40%);
   --color-bright-purple-dark: hsl(267, 60%, 35%);
   --color-purple-light: hsl(240, 21%, 52%);
   --color-purple-medium: hsl(245, 28%, 40%);
+  --color-purple-dark: hsl(252, 38%, 18%);
+  --color-purple-dark: hsl(252, 38%, 18%);
+  --color-purple-dark: hsl(252, 38%, 18%);
+  --color-purple-dark: hsl(252, 38%, 18%);
   --color-purple-dark: hsl(252, 38%, 18%);
 }
 
@@ -39,32 +45,45 @@ body,
   min-height: 100%;
 }
 
+html {
+  scroll-snap-type: y proximity;
+}
+
 body {
   margin: 0;
 }
 
-
-.neuromancer-bg {
-  background: linear-gradient(
-    135deg, 
-    #0d080b 0%, 
-    hsl(342, 42%, 25%) 35%, 
-    hsl(346, 49%, 38%) 70%, 
-    #0d080b 100%
-  );
-  background-size: 400% 400%;
-  animation: gradientShift 15s ease infinite;
+section {
+  scroll-snap-align: start;
+  scroll-margin-top: 5rem;
 }
 
-@keyframes gradientShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+
+.neuromancer-intro {
+  animation: neuromancer-intro 3.8s ease-in-out forwards ;
 }
+
+@keyframes neuromancer-intro {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  70% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+}
+
 
 @media (prefers-reduced-motion: reduce) {
-  .neuromancer-bg {
-    animation: none;
+  .neuromancer-intro {
+    animation-duration: 1ms;
   }
 }
 
