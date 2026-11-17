@@ -11,19 +11,19 @@ export const About = () => {
         id="about"
       >
         <div className="flex items-start w-full p-10 snap-center">
-          <h2 className={`${styles.titles}`}>
+          <h2 className={`${styles.titles} text-orange-dark`}>
             About
           </h2>
         </div>
-        <div className="flex flex-col gap-4 w-[90vw] md:w-[70vw] p-10 md:text-[18px] bg-gray-very-dark/70 rounded-2xl">
+        <div className="flex flex-col gap-4 w-[90vw] md:w-[70vw] p-10 md:text-[18px] bg-gray-very-dark/70 rounded-2xl shadow-lg shadow-replicant-eyes">
           <div className="flex flex-col gap-4 justify-center items-center indent-6 md:indent-8">
             <p>
               Hi! I am{' '}
-              <span className="text-green-light font-bold">Cezar Viana</span>.
+              <span className="text-orange-dark font-bold">Cezar Viana</span>.
             </p>
             <p>
               I am a{' '}
-              <span className="text-green-light font-bold">
+              <span className="text-orange-dark font-bold">
                 Front End Developer
               </span>
               .
@@ -39,7 +39,7 @@ export const About = () => {
             <p>
               I am fully dedicated to the web development field and have built
               projects using front-end technologies such as
-              <span className="text-green-light font-bold">
+              <span className="text-orange-dark font-bold">
                 {` `}HTML, CSS, Tailwind, JavaScript, React and Clean Code
                 practices
               </span>
