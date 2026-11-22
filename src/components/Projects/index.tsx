@@ -4,6 +4,8 @@ import neuromancerImg from '../../assets/images/neuromancer.gif'
 import neuromancerVisorImg from '../../assets/images/neuromancer-visor.gif'
 import { useEffect, useRef, useState } from 'react'
 import { Button } from '../Button'
+import { motion } from 'motion/react'
+import { motionListVariants, xMotionItemVariants } from '#/utils/motion-variants'
 
 export const Projects = () => {
   const [hasEntered, setHasEntered] = useState(false)
@@ -48,16 +50,23 @@ export const Projects = () => {
               src={neuromancerImg}
               alt="Neuromancer style animation with a girl with cyberpunk visor"
               onAnimationEnd={() => setShowProjects(true)}
-              className="absolute z-50 w-120 rounded-2xl object-contain neuromancer-intro "
+              className="absolute z-50 w-220 rounded-2xl object-contain neuromancer-intro "
             />
           )}
 
           {showProjects && (
             <div className="w-full px-10">
-              <ul className="flex flex-wrap items-center justify-around gap-6 w-full">
+              <motion.ul
+                className="flex flex-wrap items-center justify-around gap-6 w-full"
+                variants={motionListVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false, amount: 0.3 }}
+              >
                 {ProjectsDone.map((site) => (
-                  <li
+                  <motion.li
                     key={site.link}
+                    variants={xMotionItemVariants}
                     className="bg-black group relative flex flex-col w-100 h-60 mb-8 overflow-hidden rounded-2xl shadow-2xl shadow-black"
                     style={{ background: site.background }}
                   >
@@ -76,9 +85,9 @@ export const Projects = () => {
                         </Button>
                       </div>
                     </div>
-                  </li>
+                  </motion.li>
                 ))}
-              </ul>
+              </motion.ul>
             </div>
           )}
         </div>
