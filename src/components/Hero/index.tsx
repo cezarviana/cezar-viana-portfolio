@@ -40,7 +40,7 @@ export const Hero = () => {
           <Button variant="primary" size="md" href="#resume">
             Resume
           </Button>
-          <Button variant="primary" size="md" href="#projects">
+          <Button variant="primary" size="md" href="#projects" target='_self'>
             Projects
           </Button>
         </div>
