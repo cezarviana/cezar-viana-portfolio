@@ -1,13 +1,12 @@
-import { styles } from '../../styles/styles'
+
 import GenbukanLogo from '../../assets/sites/genbukan-mon-kanji.png'
 import StudioGhibliLogo from '../../assets/sites/studio-ghibli.png'
 import SistemasRPGLogo from '../../assets/sites/sistemas-rpg.png'
 import JogosParalimpicosLogo from '../../assets/sites/jogos-paralimpicos.png'
 import BatlifeLogo from '../../assets/sites/batlife.png'
-import { Button } from '../Button'
 
-export const ProjectsSites = () => {
-  interface Site {
+
+  interface Projects {
     title: string
     description: string
     link: string
@@ -15,7 +14,7 @@ export const ProjectsSites = () => {
     background?: string
   }
 
-  const sites: Site[] = [
+  export const ProjectsDone: Projects[] = [
     {
       title: 'Genbukan Iaido',
       description:
@@ -56,32 +55,3 @@ export const ProjectsSites = () => {
       background: 'hsl(191, 100%, 91%)',
     },
   ]
-
-  return (
-    <>
-      <ul className="flex flex-wrap items-center justify-around gap-6 w-full">
-        {sites.map((site) => (
-          <li
-            key={site.link}
-            className="bg-black group relative flex flex-col w-100 h-60 mb-8 overflow-hidden rounded-2xl shadow-2xl shadow-black"
-            style={{ background: site.background }}
-          >
-            <img
-              src={site.image}
-              alt={site.title}
-              className="h-full w-full object-contain transition-transform duration-300 ease-in-out group-hover:scale-105 p-2"
-            />
-
-            <div className="absolute inset-0 flex flex-col justify-center gap-4 bg-black/85 p-6 text-white text-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-              <h3 className={styles.subtitles}>{site.title}</h3>
-              <p className="line-clamp-3">{site.description}</p>
-              <div className="flex justify-center items-center">
-                <Button variant="primary" size="md" href={site.link}>Visit Site {`>`} </Button>
-              </div>
-            </div>
-          </li>
-        ))}
-      </ul>
-    </>
-  )
-}
