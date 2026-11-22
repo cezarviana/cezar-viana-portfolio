@@ -48,7 +48,7 @@ export const Projects = () => {
               src={neuromancerImg}
               alt="Neuromancer style animation with a girl with cyberpunk visor"
               onAnimationEnd={() => setShowProjects(true)}
-              className="absolute z-50 w-200 rounded-2xl object-contain neuromancer-intro "
+              className="absolute z-50 w-120 rounded-2xl object-contain neuromancer-intro "
             />
           )}
 
