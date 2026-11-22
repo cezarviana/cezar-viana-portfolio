@@ -55,7 +55,8 @@ export const MenuMobile = ({ navLinks }: MenuMobileProps) => {
             <a
               href={link.href}
               key={link.name}
-              className={`${styles.navLinks}`}
+              className={styles.navLinks}
+              onClick={() => setMenuIsOpen(false)}
             >
               {link.name}
             </a>
